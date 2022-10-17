@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppTempoAgora.MainPage">
+
+    <StackLayout>
+        <StackLayout  BackgroundColor="#8FBC8F" >
+            <StackLayout Padding="12,12,12,12" HorizontalOptions="Center">
+
+                <Label Text="PROCURAR CIDADE" TextColor="#8FBC8F"  FontSize="Title"  HorizontalTextAlignment="Center"/>
+
+                <Entry x:Name="cidadeEntry" Placeholder="Digite o nome da Cidade" TextColor="Black" FontSize="Body"/>
+
+                <Button x:Name="btnPrevisao" Text="Previsão do Tempo" WidthRequest="185" Clicked="btnPrevisao_Clicked" BackgroundColor="#3CB371" />
+            </StackLayout>
+            
+            
+            
+            
+        </StackLayout>
+        <StackLayout Padding="12, 12, 12, 12" HorizontalOptions="Center">
+            <Label Text="Local" />
+            <Label Text="{Binding Title}" TextColor="Black" />
+            <Label Text="Temperatura" />
+            <Label x:Name="tempLabel" TextColor="Black" Text="{Binding Temperature}" />
+            <Label Text="Veloc. Vento" />
+            <Label x:Name="windLabel" Text="{Binding Wind}" TextColor="Black" />
+            <Label Text="Humidade" />
+            <Label x:Name="humidityLabel" Text="{Binding Humidity}" TextColor="Black"/>
+            <Label Text="Visibilidade" />
+            <Label x:Name="visibilityLabel" Text="{Binding Visibility}" TextColor="Black"/>
+            <Label Text="Hora do Nascimento do Sol" />
+            <Label x:Name="sunriseLabel" Text="{Binding Sunrise}" TextColor="Black"/>
+            <Label Text="Hora do Pôr do Sol" />
+            <Label x:Name="sunsetLabel" Text="{Binding Sunset}" TextColor="Black" />
+
+        </StackLayout>
+
+
+    </StackLayout>
+
+</ContentPage>
